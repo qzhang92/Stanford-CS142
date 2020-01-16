@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Calendar</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="Calendar.js"></script>
+</head>
+
+<body>
+    <button class='prev' onclick="cal1.prev()">prev</button>
+    <button class='next' onclick="cal1.next()">next</button>
+    <div id="div1">
+        <script type="text/javascript">
+        //<![CDATA[
+            var cal1 = new Calendar("div1");
+            cal1.render(new Date("Jul 23, 1992"));
+        //]]>
+        </script>
+    </div>
+    
+    <button class='prev' onclick="cal.prev()">prev</button>
+    <button class='next' onclick="cal.next()">next</button>
+    <div id = "div2">
+        
+        <script type="text/javascript">
+        //<![CDATA[
+            var cal = new Calendar("div2");
+            cal.render(new Date());
+        //]]>
+        </script>
+    </div>
+
+    <input type="button" value="Click Here" onclick="doFirst(); doSecond();">
+    
+    
+</body>
+</html>
