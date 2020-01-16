@@ -1,0 +1,68 @@
+<h1 class = "myCenter">This is a list of user</h1>
+<% if @user %>
+
+    <h1 class="contentTitle">
+        
+    </h1>
+
+    <% @user.photos.each do |photo| %>
+        <div class = "myCenter">
+>
+
+            <!-- if there are comments on this photo, create two columns: one for the photo, one for the comments,
+                 otherwise create a single column to center the photo in the middle of the page -->
+            <% if !photo.comments.empty? %>
+                <% columnClass = "1photoLeftColumn" %>
+            <% else %>
+                <% columnClass = "1photoSingleColumn" %>
+            <% end %>
+
+            <!-- photo column -->
+            <div class="<%= columnClass %>">
+                <img class="1photoImg" src="/images/<%= photo.file_name %>" alt="Photo of <%= @user.first_name %>"  height="420" width="420"/>
+                <div class="1photoCreationDate">Date Created: <%= photo.date_time.to_formatted_s(:long) %></div>
+                <%= link_to('New Comment', url_for(:controller => "display", :action => "newComment", :photo_id => photo.id))%>
+                <%= link_to('New Tag', url_for(:controller => "display", :action => "goToTag", :photo_id => photo.id))%>
+            </div>
+
+            <!-- comments column (if any) -->
+            <% if !photo.comments.empty? %>
+                <div class="1photoRightColumn">
+                    
+                    <% photo.comments.each do |comment| %>
+
+                        <%= render("comment", :comment => comment) %>
+
+                    <% end %>
+                    
+                </div>
+            <% end %> 
+            <!-- tags column (if any) -->
+             <% if !photo.tags.empty? %>
+                <div class="1photoRightColumn">
+                    <p>People tagged</p>
+                    <% photo.tags.each do |tag| %>
+
+                        <%= render("tag", :tag => tag) %>
+
+                    <% end %>
+                    
+                </div>
+            <% end %> 
+                
+            <div class="1clearBothDiv"></div>
+
+        </div>
+    <% end %>
+
+<% else %>
+
+    <% @pageTitle = "User not found" %>
+
+<% end %>
+<!-- allow logged in users to upload pictures only to their profiles -->
+<% if @logged_in and @logged_in.id == @user.id %>
+    <div>
+        <a href="/pics/photo">Add new photo</a>
+    </div>
+<% end %>

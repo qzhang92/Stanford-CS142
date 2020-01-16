@@ -1,0 +1,9 @@
+<div>
+  <div class = "date">
+    At <%= comment.date_time %>
+  <%= link_to(comment.user.first_name + " "  +comment.user.last_name, '/pics/user/' + comment.user.id.to_s )%> Says:
+  </div>
+  <p class = "comment">
+    <%= comment.comment %>
+  </p>
+</div>
