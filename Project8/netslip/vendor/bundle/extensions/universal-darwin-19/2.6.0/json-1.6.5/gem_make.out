@@ -1,0 +1,25 @@
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/bin/ruby -I /System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/lib/ruby/2.6.0 -r ./siteconf20200114-96032-22d14y.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+make "DESTDIR=" clean
+
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+make "DESTDIR="
+compiling parser.c
+In file included from parser.rl:1:
+./../fbuffer/fbuffer.h:151:47: error: too few arguments provided to function-like macro invocation
+    VALUE result = rb_str_new(FBUFFER_PAIR(fb));
+                                              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Ruby.framework/Versions/2.6/usr/include/ruby-2.6.0/ruby/intern.h:814:9: note: macro 'rb_str_new' defined here
+#define rb_str_new(str, len) RB_GNUC_EXTENSION_BLOCK(   \
+        ^
+In file included from parser.rl:1:
+./../fbuffer/fbuffer.h:151:11: warning: incompatible pointer to integer conversion initializing 'VALUE' (aka 'unsigned long') with an expression of type 'VALUE (const char *, long)' (aka 'unsigned long (const char *, long)') [-Wint-conversion]
+    VALUE result = rb_str_new(FBUFFER_PAIR(fb));
+          ^        ~~~~~~~~~~
+1 warning and 1 error generated.
+make: *** [parser.o] Error 1
+
+make failed, exit code 2

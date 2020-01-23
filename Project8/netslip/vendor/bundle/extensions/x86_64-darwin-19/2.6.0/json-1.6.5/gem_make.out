@@ -1,0 +1,38 @@
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+/Users/loading/.rbenv/versions/2.6.3/bin/ruby -I /Users/loading/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20200114-96988-j4cumv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+make "DESTDIR=" clean
+
+current directory: /Users/Shared/RelocatedItems/Security/zhangqi/Work/RevisedCS142/Project8/netslip/vendor/bundle/gems/json-1.6.5/ext/json/ext/parser
+make "DESTDIR="
+compiling parser.c
+In file included from parser.rl:1:
+./../fbuffer/fbuffer.h:142:9: warning: variable 'result' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+    if (len > 0) {
+        ^~~~~~~
+./../fbuffer/fbuffer.h:146:12: note: uninitialized use occurs here
+    return result;
+           ^~~~~~
+./../fbuffer/fbuffer.h:142:5: note: remove the 'if' if its condition is always true
+    if (len > 0) {
+    ^~~~~~~~~~~~~
+./../fbuffer/fbuffer.h:139:20: note: initialize the variable 'result' to silence this warning
+    FBuffer *result;
+                   ^
+                    = NULL
+./../fbuffer/fbuffer.h:151:47: error: too few arguments provided to function-like macro invocation
+    VALUE result = rb_str_new(FBUFFER_PAIR(fb));
+                                              ^
+/Users/loading/.rbenv/versions/2.6.3/include/ruby-2.6.0/ruby/intern.h:814:9: note: macro 'rb_str_new' defined here
+#define rb_str_new(str, len) RB_GNUC_EXTENSION_BLOCK(   \
+        ^
+In file included from parser.rl:1:
+./../fbuffer/fbuffer.h:151:11: warning: incompatible pointer to integer conversion initializing 'VALUE' (aka 'unsigned long') with an expression of type 'VALUE (const char *, long)' (aka 'unsigned long (const char *, long)') [-Wint-conversion]
+    VALUE result = rb_str_new(FBUFFER_PAIR(fb));
+          ^        ~~~~~~~~~~
+2 warnings and 1 error generated.
+make: *** [parser.o] Error 1
+
+make failed, exit code 2
