@@ -1,0 +1,45 @@
+.head1 {
+    width: 100px;
+    background-color: #687291;
+    color: white;
+    text-align: left;
+    border: none;
+    font-style: italic;
+    
+}
+
+.head2 {
+    width: 100px;
+    background-color: #687291;
+    color: white;
+    text-align: center;
+    border: none;
+    font-style: italic;
+}
+
+.content1 {
+    background-color: #eeeff2;
+    
+}
+
+.content2 {
+    background-color: #dfe1e7;
+    
+}
+
+.centerT {
+    text-align: center;
+}
+
+.total {
+    
+    visibility: hidden;
+}
+
+.item {
+    width: 180px;
+}
+
+th, td {
+    padding: 15px;
+  }

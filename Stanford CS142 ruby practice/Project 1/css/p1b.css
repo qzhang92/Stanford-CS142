@@ -1,0 +1,26 @@
+table {
+    border: 10px solid #d0d0ff;
+    padding: 20px;
+}
+
+
+.total {
+    font-weight: bold;
+    border-top: 3px solid black;
+}
+
+
+.head2 {
+    text-align: center;
+    width: 100px;
+    
+}
+
+.centerT {
+    text-align: center;
+}
+
+.head1 {
+    text-align: left;
+    width: 180px;
+}

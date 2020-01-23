@@ -1,6 +1,0 @@
-all photos
-<h1 class = "myCenter">This is a list of all photoes</h1>
-<% @phs.each do |u| %>
-<%= link_to(u.file_name + u.user_id.to_s, "/pics/" + u.id.to_s)  %>
-<br>
-<% end %>
